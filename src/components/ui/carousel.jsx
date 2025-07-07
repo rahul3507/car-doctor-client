@@ -104,8 +104,11 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
             {title}
           </h2>
           <p className=" pr-12">{desc}</p>
-          <div className="flex relative">
+          <div className="flex relative gap-2">
             <button className="mt-6 px-2 md:px-4 py-4 cursor-pointer w-fit  sm:text-sm text-black bg-red-400 h-4 md:h-10 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+              {button}
+            </button>
+            <button className="mt-6 px-2 md:px-4 py-4 cursor-pointer w-fit  sm:text-sm text-black bg-gray-400 h-4 md:h-10 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
               {button}
             </button>
           </div>
@@ -152,7 +155,7 @@ export default function Carousel({ slides }) {
 
   return (
     <div
-      className="relative w-full h-[60vmin] mx-auto overflow-hidden border-2"
+      className="relative w-full h-[60vmin] mx-auto overflow-hidden "
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
