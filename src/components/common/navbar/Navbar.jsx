@@ -70,7 +70,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 gap-6">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <Button className="btn">Appointment</Button>
+        <Button className="py-2 border border-amber-500 text-amber-500 bg-transparent hover:bg-gray-700">
+          Appointment
+        </Button>
       </div>
     </div>
   );
