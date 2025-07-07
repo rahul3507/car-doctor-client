@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": false,
+  "tsx": false,
+  "tailwind": {
+    "config": "",
+    "css": "src/App.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "/car-doctor-client/src/components",
+    "utils": "/car-doctor-client/src/components/utils",
+    "ui": "/car-doctor-client/src/components/ui",
+    "lib": "/car-doctor-client/src/components/lib",
+    "hooks": "/car-doctor-client/src/components/hooks"
+  },
+  "iconLibrary": "lucide"
+}
