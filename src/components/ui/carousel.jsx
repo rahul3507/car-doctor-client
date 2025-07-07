@@ -51,13 +51,13 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title } = slide;
+  const { src, button, title, desc } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d] w-full flex-shrink-0 ">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col  relative  text-white opacity-100 transition-all duration-300 ease-in-out w-full h-[60vmin] mx-0 z-10 box-border"
+        className="flex flex-1 flex-col  relative  text-white opacity-100 transition-all duration-300 ease-in-out w-full h-[60vmin] mx-0 z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -71,7 +71,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-[96%] h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -103,8 +103,9 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
           <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative">
             {title}
           </h2>
+          <p className=" pr-12">{desc}</p>
           <div className="flex relative">
-            <button className="mt-6 px-4 py-2 w-fit  sm:text-sm text-black bg-white h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+            <button className="mt-6 px-2 md:px-4 py-4 cursor-pointer w-fit  sm:text-sm text-black bg-red-400 h-4 md:h-10 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
               {button}
             </button>
           </div>
@@ -151,11 +152,11 @@ export default function Carousel({ slides }) {
 
   return (
     <div
-      className="relative w-[100vw] h-[60vmin] mx-auto overflow-hidden border-2"
+      className="relative w-full h-[60vmin] mx-auto overflow-hidden border-2"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute w-[100vw] flex transition-transform duration-1000 ease-in-out"
+        className="absolute w-full flex transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * 100}%)`,
           width: `${slides.length * 25}vw`,
@@ -171,7 +172,7 @@ export default function Carousel({ slides }) {
           />
         ))}
       </ul>
-      <div className="absolute flex bottom-2 right-14 md:right-24">
+      <div className="absolute flex bottom-2 right-2 z-10">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
