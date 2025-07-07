@@ -49,12 +49,16 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <Link to="/" className="btn btn-ghost text-xl rounded-xl">
-            <img src="/Car-logo.png" alt="Car Doctor" className="h-9 w-12 " />
+          <Link
+            to="/"
+            className="btn btn-ghost text-xl rounded-xl hover:bg-transparent hover:border-0"
+          >
+            <img
+              src="/Car-Doctor-Logo.png"
+              alt="Car Doctor"
+              className="h-10 w-16 "
+            />
           </Link>
-          <h1 className="text-sm italic text-black dark:text-white">
-            Car Doctor
-          </h1>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">

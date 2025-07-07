@@ -6,7 +6,11 @@ const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
       <aside>
-        <img src="/Car-doctor.png" alt="Car Doctor" className="h-7 w-9" />
+        <img
+          src="/Car-Doctor-Logo.png"
+          alt="Car Doctor"
+          className="h-16 w-24"
+        />
         <p>
           ACME Industries Ltd.
           <br />
