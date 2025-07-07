@@ -51,7 +51,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title, desc } = slide;
+  const { src } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d] w-full flex-shrink-0 ">
@@ -84,7 +84,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
-            alt={title}
+            alt="banner"
             src={src}
             onLoad={imageLoaded}
             loading="eager"
@@ -96,20 +96,23 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
         </div>
 
         <article
-          className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out  ${
+          className={`relative my-auto p-[4vmin] transition-opacity duration-1000 ease-in-out  lg:w-[50%] ${
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative">
-            {title}
+          <h2 className="text-lg md:text-2xl lg:text-4xl font-bold relative">
+            Affordable Price for Car Servicing
           </h2>
-          <p className=" pr-12">{desc}</p>
+          <p className=" pr-16 text-xs md:text-sm lg:text-base mt-2 text-gray-200">
+            There are many variations of passages of available. But the majority
+            have suffered alteration in some form.
+          </p>
           <div className="flex relative gap-2">
             <button className="mt-6 px-2 md:px-4 py-4 cursor-pointer w-fit  sm:text-sm text-black bg-red-400 h-4 md:h-10 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-              {button}
+              Discover More
             </button>
             <button className="mt-6 px-2 md:px-4 py-4 cursor-pointer w-fit  sm:text-sm text-black bg-gray-400 h-4 md:h-10 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-              {button}
+              Latest Project
             </button>
           </div>
         </article>
@@ -121,7 +124,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
 const CarouselControl = ({ type, title, handleClick }) => {
   return (
     <button
-      className={`w-6 md:w-10 md:h-10 h-6 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+      className={`w-6 md:w-10 cursor-pointer md:h-10 h-6 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
         type === "previous" ? "rotate-180" : ""
       }`}
       title={title}
@@ -155,7 +158,7 @@ export default function Carousel({ slides }) {
 
   return (
     <div
-      className="relative w-full h-[60vmin] mx-auto overflow-hidden "
+      className="relative w-full h-[60vmin] mx-auto overflow-hidden rounded-2xl "
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
