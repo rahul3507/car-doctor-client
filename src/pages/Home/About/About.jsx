@@ -30,6 +30,7 @@ const About = () => {
             change, tire replacement, or engine diagnostics, the platform aims
             to provide quality services at affordable rates.
             <br />
+            <br />
             Car Doctor’s primary goal is to ensure that car owners receive the
             right care and attention their vehicles need to maintain peak
             performance. The platform features an easy-to-use interface,
