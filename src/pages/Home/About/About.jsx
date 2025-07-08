@@ -18,10 +18,10 @@ const About = () => {
         </div>
         <div className="w-full md:w-3/4 lg:w-1/2 space-y-2 lg:space-y-5">
           <h1 className="text-3xl text-orange-500 font-bold">About Us!</h1>
-          <h1 className="text-3xl md:text-5xl font-bold text-black dark:text-white">
+          <h1 className="text-3xl md:text-5xl font-bold dark:text-white">
             We are qualified & of experience in this field.
           </h1>
-          <p className="py-2 lg:space-y-5">
+          <p className="py-2 lg:space-y-5 dark:text-white">
             Car Doctor is an innovative and user-friendly platform designed to
             make car maintenance and repair services more accessible to vehicle
             owners. By leveraging technology, Car Doctor connects car owners
@@ -38,7 +38,7 @@ const About = () => {
             Car Doctor allows users to access their vehicle’s service history,
             helping to track maintenance over time.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-error">Get more Info</button>
         </div>
       </div>
     </div>
