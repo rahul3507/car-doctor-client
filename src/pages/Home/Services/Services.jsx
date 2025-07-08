@@ -1,8 +1,15 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Services = () => {
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch("services.json")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
     <div className="mt-4">
       <div className="text-center">
@@ -11,6 +18,7 @@ const Services = () => {
           Our Servicec Area
         </h2>
       </div>
+      <div>{services.length}</div>
     </div>
   );
 };
