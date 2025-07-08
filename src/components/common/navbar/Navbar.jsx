@@ -7,19 +7,19 @@ import { Button } from "../../ui/button";
 const Navbar = () => {
   const navItems = (
     <>
-      <li>
+      <li className="dark:text-white hover:text-amber-500">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="dark:text-white hover:text-amber-500">
         <Link to="/about">About</Link>
       </li>
-      <li>
+      <li className="dark:text-white hover:text-amber-500">
         <Link to="/services">Services</Link>
       </li>
-      <li>
+      <li className="dark:text-white hover:text-amber-500">
         <Link to="/blog">Blog</Link>
       </li>
-      <li>
+      <li className="dark:text-white hover:text-amber-500">
         <Link to="/contact">Contact</Link>
       </li>
     </>
