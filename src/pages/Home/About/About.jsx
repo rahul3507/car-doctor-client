@@ -38,7 +38,7 @@ const About = () => {
             Car Doctor allows users to access their vehicle’s service history,
             helping to track maintenance over time.
           </p>
-          <button className="btn btn-error">Get more Info</button>
+          <button className="btn btn-error ">Get more Info</button>
         </div>
       </div>
     </div>

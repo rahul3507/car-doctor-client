@@ -22,7 +22,7 @@ const currentYear = new Date().getFullYear();
 const FooterWithSocialLinks = () => {
   return (
     <footer className="relative w-full">
-      <div className="mx-auto w-full  px-8">
+      <div className="mx-auto w-full  p-8 pb-0">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="mb-6">
             <img src="/Car-Doctor-Logo.png" alt="Logo" className="h-16 w-20" />
