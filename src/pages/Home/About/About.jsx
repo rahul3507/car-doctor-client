@@ -16,7 +16,7 @@ const About = () => {
             className="w-3/5 md:w-1/2 h-72 md:h-80 lg:h-96 border-4 lg:border-8 border-gray-50 dark:border-gray-800 absolute right-4 md:right-20 lg:right-28 top-1/3 rounded-lg shadow-2xl"
           />
         </div>
-        <div className="w-full md:w-3/4 lg:w-1/2 space-y-2 lg:space-y-5">
+        <div className="w-full md:w-3/4 lg:w-1/2 space-y-2 lg:space-y-5 text-center lg:text-start">
           <h1 className="text-3xl text-orange-500 font-bold">About Us!</h1>
           <h1 className="text-3xl md:text-5xl font-bold dark:text-white">
             We are qualified & of experience in this field.
