@@ -1,7 +1,7 @@
 /** @format */
 import { Link } from "react-router-dom";
 const SignUp = () => {
-  const handleLogin = (event) => {
+  const handleSignUp = (event) => {
     event.preventDefault();
   };
   return (
@@ -13,36 +13,41 @@ const SignUp = () => {
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
             <h1 className="text-3xl text-center font-bold dark:text-white">
-              Login
+              Sign Up
             </h1>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleSignUp}>
               <fieldset className="fieldset">
-                <label className="label">Email</label>
+                <label className="label dark:text-white">Name</label>
+                <input
+                  type="name"
+                  name="name"
+                  className="input dark:text-white"
+                  placeholder="Enter your name"
+                />
+                <label className="label dark:text-white">Email</label>
                 <input
                   type="email"
                   name="email"
-                  className="input"
-                  placeholder="Email"
+                  className="input dark:text-white"
+                  placeholder="Enter email"
                 />
-                <label className="label">Password</label>
+                <label className="label dark:text-white">Password</label>
                 <input
                   name="password"
                   type="password"
-                  className="input"
+                  className="input dark:text-white"
                   placeholder="Password"
                 />
-                <div>
-                  <a className="link link-hover">Forgot password?</a>
-                </div>
+
                 <button className="btn btn-neutral mt-4" type="submit">
-                  Login
+                  Sign Up
                 </button>
               </fieldset>
             </form>
-            <p className="my-4 text-center">
-              New to Car Doctors?
-              <Link className="text-orange-600 font-bold" to="/signup">
-                Sign Up
+            <p className="my-4 text-center dark:text-white">
+              Already have an account?
+              <Link className="text-orange-600 font-bold" to="/login">
+                Sign In
               </Link>
             </p>
           </div>

@@ -34,14 +34,16 @@ const Login = () => {
                   placeholder="Password"
                 />
                 <div>
-                  <a className="link link-hover">Forgot password?</a>
+                  <a className="link link-hover dark:text-white">
+                    Forgot password?
+                  </a>
                 </div>
                 <button className="btn btn-neutral mt-4" type="submit">
                   Login
                 </button>
               </fieldset>
             </form>
-            <p className="my-4 text-center">
+            <p className="my-4 text-center dark:text-white">
               New to Car Doctors?
               <Link className="text-orange-600 font-bold" to="/signup">
                 Sign Up
