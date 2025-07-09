@@ -34,6 +34,3 @@ const Services = () => {
 };
 
 export default Services;
-
-
-Figma.com/file/1rfhQoJVRBCZdT6QDBn7td/car-doctor
