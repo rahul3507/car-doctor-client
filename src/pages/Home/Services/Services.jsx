@@ -12,8 +12,8 @@ const Services = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <div className="mt-4">
-      <div className="text-center">
+    <div className="mt-8 space-y-7 ">
+      <div className="text-center space-y-4">
         <h3 className="text-2xl font-bold text-orange-600">Services</h3>
         <h2 className="text-2xl md:text-3xl lg:text-5xl dark:text-white">
           Our Servicec Area
@@ -34,3 +34,6 @@ const Services = () => {
 };
 
 export default Services;
+
+
+Figma.com/file/1rfhQoJVRBCZdT6QDBn7td/car-doctor
