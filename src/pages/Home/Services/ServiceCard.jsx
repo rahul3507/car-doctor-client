@@ -23,27 +23,23 @@ const ServiceCard = ({ service }) => {
         </CardItem>
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white"
+          className="text-lg md:text-xl  font-bold text-neutral-600 dark:text-white  mt-3"
         >
           {title}
         </CardItem>
 
-        <div className="flex justify-between items-center mt-6">
+        <div className="flex justify-between items-center mt-2">
           <CardItem
-            translateZ={20}
-            as="a"
-            href="https://twitter.com/mannupaaji"
-            target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            translateZ="50"
+            className="text-sm md:text-base font-medium text-red-500"
           >
-            Try now →
+            Price: {price}
           </CardItem>
           <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            translateZ="50"
+            className="text-sm md:text-base font-medium text-red-500"
           >
-            Sign up
+            <MoveRight />
           </CardItem>
         </div>
       </CardBody>
