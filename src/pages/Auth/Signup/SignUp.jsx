@@ -1,8 +1,6 @@
 /** @format */
-
 import { Link } from "react-router-dom";
-
-const Login = () => {
+const SignUp = () => {
   const handleLogin = (event) => {
     event.preventDefault();
   };
@@ -54,4 +52,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
