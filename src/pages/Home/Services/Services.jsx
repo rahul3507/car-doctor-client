@@ -24,7 +24,7 @@ const Services = () => {
           believable.
         </p>
       </div>
-      <div>
+      <div className="flex flex-wrap flex-row justify-center-safe gap-5  ">
         {services.map((service) => (
           <ServiceCard key={service._id} service={service} />
         ))}
