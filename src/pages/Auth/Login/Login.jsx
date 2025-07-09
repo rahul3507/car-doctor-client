@@ -18,9 +18,15 @@ const Login = () => {
             <form onSubmit={handleLogin}>
               <fieldset className="fieldset">
                 <label className="label">Email</label>
-                <input type="email" className="input" placeholder="Email" />
+                <input
+                  type="email"
+                  name="email"
+                  className="input"
+                  placeholder="Email"
+                />
                 <label className="label">Password</label>
                 <input
+                  name="password"
                   type="password"
                   className="input"
                   placeholder="Password"
