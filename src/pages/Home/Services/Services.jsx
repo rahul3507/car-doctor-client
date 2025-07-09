@@ -17,6 +17,11 @@ const Services = () => {
         <h2 className="text-2xl md:text-3xl lg:text-5xl dark:text-white">
           Our Servicec Area
         </h2>
+        <p className="dark:text-white">
+          The majority have suffered alteration in some form, by injected
+          humour, or randomised <br /> words which do not look even slighty
+          believable.
+        </p>
       </div>
       <div>{services.length}</div>
     </div>
