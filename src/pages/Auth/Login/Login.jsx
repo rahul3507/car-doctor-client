@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <div className="hero h-screen  w-full">
       <div className="hero-content w-full  flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 text-center ">
+        <div className="w-full lg:w-1/2 text-center  ">
           <img src="Login-banner.png" alt="" className="mx-auto" />
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
