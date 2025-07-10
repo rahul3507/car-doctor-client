@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import { createContext } from "react";
 import { getAuth } from "firebase/auth";
 import app from "../../firebase/firebase.config";
@@ -8,11 +8,15 @@ import app from "../../firebase/firebase.config";
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
-const Providers = ({ children }) => {
-  const authInfo = {};
+const AuthProviders = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const authInfo = {
+    user,
+  };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
 };
 
-export default Providers;
+export default AuthProviders;
