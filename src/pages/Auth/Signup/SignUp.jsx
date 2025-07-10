@@ -14,10 +14,12 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(name, email, password);
 
-    createUser(email, password).then((result) => {
-      const user = result.user;
-      console.log(user);
-    });
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .then((error) => console.log(error));
   };
 
   return (
