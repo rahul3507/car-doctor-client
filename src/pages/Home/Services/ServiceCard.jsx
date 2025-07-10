@@ -15,7 +15,7 @@ const ServiceCard = ({ service }) => {
   return (
     <CardContainer className="inter-var m-0">
       <BackgroundGradient className="">
-        <CardBody className=" dark:bg-gray-700  relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  dark:border-white/[0.2] border-black/[0.1]  max-w-[30rem] h-auto rounded-xl p-6 pt-3 border  ">
+        <CardBody className="bg-white dark:bg-gray-700  relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  dark:border-white/[0.2] border-black/[0.1]  max-w-[30rem] h-auto rounded-3xl p-6 pt-3 border  ">
           <CardItem translateZ="100" className="w-full mt-4">
             <img
               src={img}
