@@ -9,9 +9,10 @@ import {
 } from "../../../components/ui/3d-card";
 
 import { MoveRight, MoveUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-  const { title, img, price } = service;
+  const { _id, title, img, price } = service;
   return (
     <CardContainer className="inter-var m-0">
       <BackgroundGradient className="">
@@ -43,7 +44,12 @@ const ServiceCard = ({ service }) => {
               translateZ="50"
               className="text-sm md:text-base font-medium text-red-500 cursor-pointer"
             >
-              <MoveRight />
+              <Link
+                to={`/checkout/${_id}`}
+                className="border border-amber-600 px-2 py-1"
+              >
+                Book Now
+              </Link>
             </CardItem>
           </div>
         </CardBody>
