@@ -42,7 +42,7 @@ const ServiceCard = ({ service }) => {
             </CardItem>
             <CardItem
               translateZ="50"
-              className="text-sm md:text-base font-medium text-red-500 cursor-pointer"
+              className="  font-medium text-red-500 cursor-pointer"
             >
               <Link
                 to={`/checkout/${_id}`}
