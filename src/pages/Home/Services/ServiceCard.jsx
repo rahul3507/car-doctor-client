@@ -46,7 +46,7 @@ const ServiceCard = ({ service }) => {
             >
               <Link
                 to={`/checkout/${_id}`}
-                className="border border-amber-600 px-2 py-1"
+                className="border border-amber-600 px-2 py-1 rounded-lg cursor-pointer"
               >
                 Book Now
               </Link>
