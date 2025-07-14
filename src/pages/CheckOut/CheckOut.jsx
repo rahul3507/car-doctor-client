@@ -6,7 +6,7 @@ import { AuthContext } from "../Providers/Providers";
 
 const CheckOut = () => {
   const service = useLoaderData();
-  const { title, _id, price } = service;
+  const { title, _id, price, img } = service;
   const { user } = useContext(AuthContext);
   const handleBookService = (event) => {
     event.preventDefault();
@@ -19,12 +19,20 @@ const CheckOut = () => {
     const order = {
       customerName: name,
       email,
+      img,
       date,
-      service: _id,
+      service: title,
+      service_id: _id,
       price,
       due_amount,
     };
     console.log(order);
+
+    fetch("")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
   return (
     <div className="text-center justify-center items-center">
