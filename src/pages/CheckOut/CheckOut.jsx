@@ -1,16 +1,36 @@
 /** @format */
 
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../Providers/Providers";
 
 const CheckOut = () => {
   const service = useLoaderData();
   const { title, _id, price } = service;
+  const { user } = useContext(AuthContext);
+  const handleBookService = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const date = form.date.value;
+    const email = user?.email;
+    const due_amount = form.due_amount.value;
+    const order = {
+      customerName: name,
+      email,
+      date,
+      service: _id,
+      price,
+      due_amount,
+    };
+    console.log(order);
+  };
   return (
     <div className="text-center justify-center items-center">
       <h1>Car Services : {title}</h1>
       <div className="card-body text-center justify-center items-center">
-        <form>
+        <form onSubmit={handleBookService}>
           <fieldset className="fieldset  ">
             <div className="  grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">
@@ -19,6 +39,7 @@ const CheckOut = () => {
                   type="name"
                   name="name"
                   className="input w-64 md:w-72 "
+                  defaultValue={user?.displayName}
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -36,12 +57,14 @@ const CheckOut = () => {
                   type="email"
                   className="input w-64 md:w-72"
                   name="email"
+                  defaultValue={user?.email}
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <label className="label">Deu amount</label>
                 <input
                   type="text"
+                  name="due_amount"
                   className="input  w-64 md:w-72"
                   defaultValue={price + `$`}
                 />
