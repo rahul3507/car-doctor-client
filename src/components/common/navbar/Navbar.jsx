@@ -1,10 +1,17 @@
 /** @format */
 
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../ui/button";
+import { AuthContext } from "../../../../src/pages/Providers/Providers";
 
 const Navbar = () => {
+  const { user, LogOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    LogOut()
+      .then(() => {})
+      .then((error) => console.log(error));
+  };
   const navItems = (
     <>
       <li className="dark:text-white hover:text-amber-500">
@@ -22,6 +29,15 @@ const Navbar = () => {
       <li className="dark:text-white hover:text-amber-500">
         <Link to="/contact">Contact</Link>
       </li>
+      {user?.email ? (
+        <li className="dark:text-white hover:text-amber-500">
+          <button onClick={handleLogOut}>Sign out</button>
+        </li>
+      ) : (
+        <li className="dark:text-white hover:text-amber-500">
+          <Link to="/login">Login</Link>
+        </li>
+      )}
     </>
   );
 
