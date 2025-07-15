@@ -28,6 +28,7 @@ const Bookings = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Price</th>
+              <th>Service</th>
             </tr>
           </thead>
           <tbody>

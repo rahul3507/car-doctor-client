@@ -3,13 +3,27 @@
 import { X } from "lucide-react";
 
 const BookingRow = ({ booking }) => {
-  const { customerName, email, date, service, price, img } = booking;
+  const { _id, customerName, email, date, service, price, img } = booking;
+
+  const handleDelete = (id) => {
+    const proceed = confirm("Are you sure, you want to delete?");
+    if (proceed) {
+      fetch(``)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+    }
+  };
 
   return (
     <tr>
       <th>
         <label>
-          <button className="cursor-pointer bg-red-600 rounded-full p-2">
+          <button
+            onClick={() => handleDelete(_id)}
+            className="cursor-pointer bg-red-600 rounded-full p-2"
+          >
             <X className="text-white" />
           </button>
         </label>
@@ -25,7 +39,7 @@ const BookingRow = ({ booking }) => {
       <td>{email}</td>
       <td>{price}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+        <button className="btn btn-ghost btn-xs">{service}</button>
       </th>
     </tr>
   );
