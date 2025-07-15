@@ -2,19 +2,8 @@
 
 import { X } from "lucide-react";
 
-const BookingRow = ({ booking }) => {
+const BookingRow = ({ booking, handleDelete }) => {
   const { _id, customerName, email, date, service, price, img } = booking;
-
-  const handleDelete = (id) => {
-    const proceed = confirm("Are you sure, you want to delete?");
-    if (proceed) {
-      fetch(``)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-        });
-    }
-  };
 
   return (
     <tr>

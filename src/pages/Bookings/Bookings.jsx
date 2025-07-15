@@ -9,6 +9,30 @@ const Bookings = () => {
 
   const url = `http://localhost:5000/bookings?email=${user.email}`;
 
+  const handleDelete = (id) => {
+    const proceed = confirm("Are you sure, you want to delete?");
+    if (proceed) {
+      fetch(`http://localhost:5000/bookings/${id}`, {
+        method: "DELETE", // Use uppercase for consistency
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            alert("Deleted Successfully");
+            const remaining = bookings.filter((booking) => booking._id !== id);
+            setBookings(remaining);
+          } else {
+            alert("Failed to delete booking");
+          }
+        })
+        .catch((error) => {
+          console.error("Error deleting booking:", error);
+          alert("An error occurred while deleting");
+        });
+    }
+  };
+
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -33,7 +57,11 @@ const Bookings = () => {
           </thead>
           <tbody>
             {bookings.map((booking) => (
-              <BookingRow key={booking._id} booking={booking}></BookingRow>
+              <BookingRow
+                key={booking._id}
+                booking={booking}
+                handleDelete={handleDelete}
+              ></BookingRow>
             ))}
           </tbody>
         </table>
