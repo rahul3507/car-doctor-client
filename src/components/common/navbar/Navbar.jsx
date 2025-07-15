@@ -6,9 +6,9 @@ import { Button } from "../../ui/button";
 import { AuthContext } from "../../../../src/pages/Providers/Providers";
 
 const Navbar = () => {
-  const { user, LogOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
-    LogOut()
+    logOut()
       .then(() => {})
       .then((error) => console.log(error));
   };
