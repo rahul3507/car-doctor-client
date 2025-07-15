@@ -35,9 +35,9 @@ const Bookings = () => {
             </tr>
           </thead>
           <tbody>
-            {bookings.map((booking) => {
-              <BookingRow key={booking._id} booking={booking}></BookingRow>;
-            })}
+            {bookings.map((booking) => (
+              <BookingRow key={booking._id} booking={booking}></BookingRow>
+            ))}
           </tbody>
         </table>
       </div>

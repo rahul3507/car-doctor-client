@@ -2,7 +2,7 @@
 
 const BookingRow = ({ booking }) => {
   const { customerName, email, date, service, price } = booking;
-  console.log("Customer name is:", price);
+
   return (
     <tr>
       <th>
