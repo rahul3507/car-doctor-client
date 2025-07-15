@@ -1,22 +1,23 @@
 /** @format */
 
+import { X } from "lucide-react";
+
 const BookingRow = ({ booking }) => {
-  const { customerName, email, date, service, price } = booking;
+  const { customerName, email, date, service, price, img } = booking;
 
   return (
     <tr>
       <th>
         <label>
-          <input type="checkbox" className="checkbox" />
+          <button className="cursor-pointer bg-red-600 rounded-full p-2">
+            <X className="text-white" />
+          </button>
         </label>
       </th>
       <td>
         <div className="avatar">
           <div className="mask mask-squircle h-12 w-12">
-            <img
-              src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-              alt="Avatar Tailwind CSS Component"
-            />
+            {img && <img src={img} alt="avatar"></img>}
           </div>
         </div>
       </td>
