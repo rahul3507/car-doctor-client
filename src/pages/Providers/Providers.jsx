@@ -11,7 +11,7 @@ import {
 } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 
-export const AuthContext = createContext();
+const AuthContext = createContext();
 const auth = getAuth(app);
 
 const AuthProviders = ({ children }) => {
@@ -55,5 +55,6 @@ const AuthProviders = ({ children }) => {
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
 };
+export { AuthContext };
 
 export default AuthProviders;

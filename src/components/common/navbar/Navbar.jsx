@@ -30,9 +30,14 @@ const Navbar = () => {
         <Link to="/contact">Contact</Link>
       </li>
       {user?.email ? (
-        <li className="dark:text-white hover:text-amber-500">
-          <button onClick={handleLogOut}>Sign out</button>
-        </li>
+        <>
+          <li className="dark:text-white hover:text-amber-500">
+            <Link to="/bookings">My Bookings</Link>
+          </li>
+          <li className="dark:text-white hover:text-amber-500">
+            <button onClick={handleLogOut}>Sign out</button>
+          </li>
+        </>
       ) : (
         <li className="dark:text-white hover:text-amber-500">
           <Link to="/login">Login</Link>
