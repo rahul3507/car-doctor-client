@@ -15,19 +15,21 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
 
     signIn(email, password)
       .then((result) => {
         const loggedInUser = result.user;
-        console.log(loggedInUser);
+        const user = { email: loggedInUser.email };
 
-        const user = { email };
-        // navigate(location?.state ? location?.state : "/");
-
-        axios.post("http://localhost:5000/jwt", user);
+        axios
+          .post("http://localhost:5000/jwt", user, { withCredentials: true })
+          .then((res) => {
+            if (res.data.success) {
+              navigate(location?.state?.from?.pathname || "/");
+            }
+          });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.error("Login failed:", error.message));
   };
 
   return (
