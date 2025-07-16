@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import { BackgroundGradient } from "../../../components/ui/background-gradient";
 import {
   CardBody,
@@ -8,7 +7,6 @@ import {
   CardItem,
 } from "../../../components/ui/3d-card";
 
-import { MoveRight, MoveUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
@@ -45,7 +43,7 @@ const ServiceCard = ({ service }) => {
               className="  font-medium text-red-500 cursor-pointer"
             >
               <Link
-                to={`/checkout/${_id}`}
+                to={`checkout/${_id}`}
                 className="border border-amber-600 px-2 py-1 rounded-lg cursor-pointer"
               >
                 Book Now
