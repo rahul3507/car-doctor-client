@@ -3,7 +3,7 @@
 import { X } from "lucide-react";
 
 const BookingRow = ({ booking, handleDelete }) => {
-  const { _id, customerName, email, date, service, price, img } = booking;
+  const { _id, customerName, email, service, price, img } = booking;
 
   return (
     <tr>

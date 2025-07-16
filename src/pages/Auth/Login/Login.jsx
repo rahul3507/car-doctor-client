@@ -1,7 +1,7 @@
 /** @format */
 
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/Providers";
 
 const Login = () => {
@@ -18,6 +18,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        <Navigate to="/" replace></Navigate>;
       })
       .catch((error) => console.log(error));
   };
